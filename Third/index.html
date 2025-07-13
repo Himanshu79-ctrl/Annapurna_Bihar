@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annapurna Bihar - Local Food Distribution Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="logo">
+           <img src="wheat-plant.png" alt="Annapurna Bihar Logo" style="width:50px;height:50px;">
+            <h1>Annapurna Bihar</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#farmers">For Farmers</a></li>
+                <li><a href="#consumers">For Consumers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero reveal">
+        <div class="hero-content">
+            <h2>Connecting Farmers Directly to Consumers</h2>
+            <p>Reducing food waste, increasing farmers' income, and ensuring fresh produce for all.</p>
+            <div class="hero-buttons">
+                <button class="primary-btn"><i class="fas fa-tractor"></i> Join as Farmer</button>
+                <button class="secondary-btn"><i class="fas fa-shopping-basket"></i> Order Food Now</button>
+            </div>
+        </div>
+        <div class="hero-image">
+           <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Farmers and Consumers">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features reveal">
+        <h2>Key Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <i class="fas fa-truck"></i>
+                <h3>Hyperlocal Delivery</h3>
+                <p>Fast delivery using eco-friendly vehicles.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-rupee-sign"></i>
+                <h3>Fair Pricing</h3>
+                <p>Farmers get better prices, consumers pay less.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-recycle"></i>
+                <h3>Zero Food Waste</h3>
+                <p>Surplus food redirected to those in need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works reveal">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <span>1</span>
+                <h3>Farmers List Produce</h3>
+                <p>Farmers upload their fresh produce with real-time pricing.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Consumers Order</h3>
+                <p>Customers browse and order directly from local farmers.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Fast Delivery</h3>
+                <p>Our logistics partners ensure quick doorstep delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farmers Section -->
+    <section id="farmers" class="farmers reveal">
+        <div class="farmers-content">
+            <h2>For Farmers</h2>
+            <p>Get fair prices, reduce middlemen, and reach more customers.</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Direct market access</li>
+                <li><i class="fas fa-check"></i> Real-time price updates</li>
+                <li><i class="fas fa-check"></i> Training & support</li>
+            </ul>
+            <button class="primary-btn"><i class="fas fa-user-plus"></i> Register as Farmer</button>
+        </div>
+        <div class="farmers-image">
+            <img src="pexels-rattasat-1453152-2804327.jpg" alt="Happy Farmer">
+        </div>
+    </section>
+
+    <!-- Consumers Section -->
+    <section id="consumers" class="consumers reveal">
+        <div class="consumers-image">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fresh Food">
+        </div>
+        <div class="consumers-content">
+            <h2>For Consumers</h2>
+            <p>Get fresh, local produce at affordable prices.</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Fresh from farm to table</li>
+                <li><i class="fas fa-check"></i> Transparent pricing</li>
+                <li><i class="fas fa-check"></i> Support local farmers</li>
+            </ul>
+            <button class="primary-btn"><i class="fas fa-shopping-cart"></i> Start Ordering</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact reveal">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="primary-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+    </section>
+
+    <!-- Login Modal -->
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button class="primary-btn">Login</button>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('signupModal')">&times;</span>
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Create Password" required>
+        <button class="primary-btn">Sign Up</button>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="wheat-plant.png" alt="Annapurna Bihar Logo" style="width:60px;height:60px;">
+                <h3>Annapurna Bihar</h3>
+                <p>Bridging the gap between farmers and consumers.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#farmers">For Farmers</a></li>
+                    <li><a href="#consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Annapurna Bihar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="loader"></div>
+
+    <!-- Farmer Registration Modal -->
+<div id="farmerModal" class="custom-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('farmerModal')">&times;</span>
+    <h2>Register as Farmer</h2>
+    <form>
+      <input type="text" placeholder="Farmer Name" required>
+      <input type="text" placeholder="Farm Location" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <button type="submit" class="primary-btn">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Consumer Order Modal -->
+<div id="consumerModal" class="custom-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('consumerModal')">&times;</span>
+    <h2>Order Food</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Delivery Address" required>
+      <input type="tel" placeholder="Contact Number" required>
+      <button type="submit" class="primary-btn">Proceed to Checkout</button>
+    </form>
+  </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
